@@ -1,0 +1,43 @@
+/* Контейнер калькулятора */
+.calculator {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-template-columns: repeat(4, 80px); /* 4 колонки по 70 пикселей */
+  grid-template-rows: minmax(80px, auto) repeat(5, 70px); /* Высота строк */
+  gap: 5px;
+  margin: 50px auto;
+}
+
+/* Экран калькулятора */
+.display {
+  grid-column: 1 / -1; /* Растянуть на все 4 колонки */
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 15px;
+  word-wrap: break-word;
+  word-break: break-all;
+  color: white;
+  font-size: 2rem;
+  border-radius: 8px;
+}
+
+/* Общие стили для кнопок */
+button {
+  cursor: pointer;
+  font-size: 1.5rem;
+  border: 1px solid white;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.75);
+  border-radius: 5px;
+}
+
+
+/* Кнопка на две колонки (для AC и =) */
+.span-two {
+  grid-column: span 2;
+  background-color: #f39c12; /* Сделаем их ярче */
+  color: white;
+}
