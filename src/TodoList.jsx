@@ -1,7 +1,11 @@
-import React, {useState} from "react"
+import React, {useState, useEffect} from "react"
 
 function ToDoList(){
-    const [tasks, setTasks] = useState([]);
+    const [tasks, setTasks] = useState(() => {
+        const saved = localStorage.getItem('myTasks');
+        return saved ? JSON.parse(saved) : [];
+    });
+
     const [newTask, setNewTask] = useState("");
 
     function handleInputChange(event){
@@ -19,6 +23,10 @@ function ToDoList(){
         const updatedTasks = tasks.filter((element, i) => i !== index);
         setTasks(updatedTasks);
     }
+
+    useEffect(() => {
+    localStorage.setItem('myTasks', JSON.stringify(tasks));
+    }, [tasks]);
 
 
 

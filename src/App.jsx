@@ -1,11 +1,11 @@
 import ToDoList from "./TodoList";
 
-function App() {
-    return(
-        <>
-        <ToDoList/>
+// function App() {
+//     return(
+//         <>
+//         <ToDoList/>
         
-        </>
-    );
-}
-export default App
+//         </>
+//     );
+// }
+// export default App
