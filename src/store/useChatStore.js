@@ -11,7 +11,7 @@ export const useChatStore = create((set) => ({
     messages: [],
     typingUsers: [],
 
-    setUser: (user) =>  set({user  }),
+    setUser: (user) =>  set({ user }),
     setLoading: (loading) => set({loading}),
 
     setContacts: (contacts) => set({contacts}),
